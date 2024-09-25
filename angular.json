@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pokemon-routes": {
+    "pokemon-routing": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pokemon-routes",
+            "outputPath": "dist/pokemon-routing",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pokemon-routes:build:production"
+              "browserTarget": "pokemon-routing:build:production"
             },
             "development": {
-              "browserTarget": "pokemon-routes:build:development"
+              "browserTarget": "pokemon-routing:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pokemon-routes:build"
+            "browserTarget": "pokemon-routing:build"
           }
         },
         "test": {
@@ -103,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "76893d0a-8539-4afe-90da-5f689b106acb"
+    "analytics": false
   }
 }

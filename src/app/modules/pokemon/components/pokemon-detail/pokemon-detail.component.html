@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h1 class="text-center">Login</h1>
+      <form>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Digite seu email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="senha"
+            placeholder="Digite sua senha"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="error-template">
+        <h1>Oops!</h1>
+        <h2>404 Página não encontrada</h2>
+        <div class="error-details">
+          Desculpe, ocorreu um erro, a página solicitada não foi encontrada!
+        </div>
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary btn-lg"
+            ><span class="glyphicon glyphicon-home"></span> Voltar para a página
+            inicial
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" *ngIf="pokemon">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <img [src]="pokemon.image" alt="Pokémon" class="card-img-top" />
+      <div class="card-body">
+        <h2 class="card-title">{{ pokemon.name }}</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>ID:</strong> {{ pokemon.id }}</p>
+            <p>
+              <strong>Tipo:</strong>
+
+              <app-pokemon-type [type]="pokemon.type"></app-pokemon-type>
+            </p>
+            <p><strong>Altura:</strong> 0.7 m</p>
+            <p><strong>Peso:</strong> 6.9 kg</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Habilidades:</strong></p>
+            <ul class="list-group">
+              <li class="list-group-item">Overgrow</li>
+              <li class="list-group-item">Chlorophyll</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <h5>Treinadores</h5>
+          <a routerLink="/treinador/1">Ash Ketchum</a>,
+          <a routerLink="/treinador/2">Misty</a>,
+          <a routerLink="/treinador/3">Brock</a>,
+          <a routerLink="/treinador/4">N</a>
+        </div>
+
+        <div class="mt-3">
+          <h5>Evoluções</h5>
+          <a href="/pokemon/3">Ivysour</a>,
+          <a routerLink="/pokemon/3">Venusaur</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
